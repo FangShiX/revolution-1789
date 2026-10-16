@@ -126,6 +126,7 @@ try {
   const darkAxe = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
+  results.darkAccessibility = darkAxe.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}));
   assert.deepEqual(
     darkAxe.violations.map((v) => v.id),
     [],
