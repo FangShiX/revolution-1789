@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+test-results/
+screens-*.png
+.env
+.env.*
+!.env.example
+*.log
+*.db
+*ocr*
+*book_audited*
+public/game_data_normalized.json
+public/local-*.json
+private/
